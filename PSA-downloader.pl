@@ -20,7 +20,7 @@ sub checkZero
 	}
 }
 
-for($i=0; $i<19; $i++)
+for($i=19; $i<20; $i++)
 {
 	$a = checkZero($i);
 	
