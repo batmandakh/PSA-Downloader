@@ -8,3 +8,7 @@ Edit the max index of first loop if index get increased next year. Adjust the st
 
 ##### Error:
 If certain index error will still download as .tgz extension but actually is error plain text.
+
+##### Filter files by name:
+
+![fb](/fb.png?raw=true "Nothing to say")
