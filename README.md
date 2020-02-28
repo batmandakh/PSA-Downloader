@@ -1,4 +1,4 @@
-www.Packetstormsecurity.org .tgz files downloader.
+Packetstormsecurity.com .tgz files downloader.
 
 ##### Usage:
 Simply run as `perl PSA-downloader.pl`. 
