@@ -4,7 +4,7 @@ www.Packetstormsecurity.org .tgz files downloader.
 Simply run as `perl PSA-downloader.pl`. 
 
 ##### Update:
-Edit the max index of first loop if index get increased next year. Adjust the start index of first loop to avoid re-download all. The inner/2nd loop indexes are fixed and no need change.
+Edit the max index of first loop if index get increased next year. Adjust the start index of first loop to avoid re-download all. The inner/2nd loop indexes are fixed(1-12 months) and no need change.
 
 ##### Error:
 If certain index error will still download as .tgz extension but actually is error plain text.
