@@ -1,6 +1,10 @@
 #!/usr/bin/perl
 
+#sudo apt-get install libwww-curl-perl
 use WWW::Curl::Easy;
+
+#https://stackoverflow.com/questions/2899367/how-can-perls-print-add-a-newline-by-default
+use feature qw(say);
 
 sub checkZero
 {
@@ -16,7 +20,7 @@ sub checkZero
 	}
 }
 
-for($i=0; $i<11; $i++)
+for($i=0; $i<20; $i++)
 {
 	$a = checkZero($i);
 	
@@ -24,8 +28,10 @@ for($i=0; $i<11; $i++)
 	{
 	$b = checkZero($j);
 	my $curl = new WWW::Curl::Easy;
-
-	$curl->setopt(CURLOPT_URL, "http://packetstormsecurity.org/$a$b-exploits/$a$b-exploits.tgz");
+	say "https://dl.packetstormsecurity.net/$a$b-exploits/$a$b-exploits.tgz";
+	$curl->setopt(CURLOPT_URL, "https://dl.packetstormsecurity.net/$a$b-exploits/$a$b-exploits.tgz");
+	#follow redirect, rf: http://linuxplayer.org/2011/10/libcurl-follow-location-header-only
+	$curl->setopt(CURLOPT_FOLLOWLOCATION, 1);
 	open($download, ">$a$b-exploits.tgz");
 	$curl->setopt(CURLOPT_WRITEDATA, $download);
 	$curl->perform;
